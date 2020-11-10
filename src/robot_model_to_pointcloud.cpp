@@ -105,7 +105,7 @@ int main(int argc, char** argv)
             unsigned j = 0;
             unsigned link_nb = 0;
             
-            if(psm.getStateMonitor()->waitForCurrentState(1.0))
+            if(psm.getStateMonitor()->waitForCurrentState(ros::Time::now(),1.0))
             {
                 
                 const ros::Time start = ros::Time::now();
